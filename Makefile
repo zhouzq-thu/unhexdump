@@ -9,7 +9,7 @@ $(PROGRAM): $(SRCS)
 
 test:
 	hexdump -C $(TEST_FILEPATH) > $(TEST_FILE).dump
-	./unhexdump -i $(TEST_FILE).dump -o $(TEST_FILE)
+	./unhexdump $(TEST_FILE).dump > $(TEST_FILE)
 	chmod +x $(TEST_FILE)
 	./$(TEST_FILE)
 
